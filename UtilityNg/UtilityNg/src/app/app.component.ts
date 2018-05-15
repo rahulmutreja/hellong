@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
     pageHeader: string = 'Employee Details';
+    title:string="main component"
 }

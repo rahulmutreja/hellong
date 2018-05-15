@@ -10,6 +10,7 @@ var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.pageHeader = 'Employee Details';
+        this.title = "main component";
     }
     AppComponent = __decorate([
         core_1.Component({
