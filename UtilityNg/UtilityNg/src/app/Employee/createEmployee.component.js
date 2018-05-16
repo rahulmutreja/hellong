@@ -9,14 +9,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var createEmployeeComponent = /** @class */ (function () {
     function createEmployeeComponent() {
-        this.firstName = 'Tom';
-        this.lastName = 'Hopkins';
-        this.gender = 'Male';
-        this.age = 20;
-        this.showdetails = true;
     }
-    createEmployeeComponent.prototype.called = function () {
-        this.showdetails = !this.showdetails;
+    createEmployeeComponent.prototype.saveEmployee = function (employeeForm) {
+        console.log(employeeForm);
     };
     createEmployeeComponent = __decorate([
         core_1.Component({

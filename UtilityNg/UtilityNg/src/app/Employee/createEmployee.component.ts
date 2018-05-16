@@ -1,4 +1,5 @@
 ﻿import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
     
@@ -6,12 +7,7 @@
     
 })
 export class createEmployeeComponent {
-    firstName: string = 'Tom';
-    lastName: string = 'Hopkins';
-    gender: string = 'Male';
-    age: number = 20;
-    showdetails: boolean = true
-    called(): void {
-        this.showdetails = !this.showdetails;
+    saveEmployee(employeeForm: NgForm): void {
+        console.log(employeeForm);
     }
 }

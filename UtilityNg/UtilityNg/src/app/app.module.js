@@ -9,12 +9,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var employee_component_1 = require("./employee/employee.component");
 var createEmployee_component_1 = require("./employee/createEmployee.component");
 var appRoutes = [
     { path: 'emp/list', component: employee_component_1.EmployeeComponent },
     { path: 'emp/create', component: createEmployee_component_1.createEmployeeComponent },
+    { path: 'emp', redirectTo: 'emp/list', pathMatch: 'full' },
     { path: '', redirectTo: 'emp/list', pathMatch: 'full' }
 ];
 var AppModule = /** @class */ (function () {
@@ -22,7 +24,7 @@ var AppModule = /** @class */ (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes)],
+            imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes), forms_1.FormsModule],
             declarations: [app_component_1.AppComponent, employee_component_1.EmployeeComponent, createEmployee_component_1.createEmployeeComponent],
             bootstrap: [app_component_1.AppComponent]
         })
